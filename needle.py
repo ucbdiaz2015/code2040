@@ -7,10 +7,10 @@ r1 = requests.post("http://challenge.code2040.org/api/haystack", json=payload1)
 json_data = json.loads(r1.text)
 
 
-needle = json_data["result"]["needle"]
+needle = json_data["result"]["needle"]	#obtain needle
 print needle
 
-index = json_data["result"]["haystack"].index(needle)
+index = json_data["result"]["haystack"].index(needle) #get index of needle in haystack
 print index
 
 payload2 = {"token":"5ZLE6uPAvA", "needle":index}

@@ -13,7 +13,7 @@ print prefix
 print array
 newArray = []
 for i in array:
-	if not i.startswith(prefix):
+	if not i.startswith(prefix):	#only add items that dont start w/ prefix
 		newArray.append(i)
 
 print newArray
