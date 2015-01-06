@@ -17,10 +17,10 @@ interval = json_data["result"]["interval"]
 givenDate = datetime.date(int(gdate[0:4]), int(gdate[5:7]), int(gdate[8:10]))
 givenTime = datetime.time(int(gdate[11:13]), int(gdate[14:16], int(gdate[17:19])))
 
-givenDateTime = datetime.datetime.combine(givenDate, givenTime)
-dateChange = datetime.timedelta(seconds=int(interval))
+givenDateTime = datetime.datetime.combine(givenDate, givenTime) #timestamp
+dateChange = datetime.timedelta(seconds=int(interval))			#interval into time
 print dateChange
-newDate = givenDateTime + dateChange
+newDate = givenDateTime + dateChange							#updated
 print str(newDate)
 
 payload2 = {"token":"5ZLE6uPAvA", "datestamp":str(newDate)}
